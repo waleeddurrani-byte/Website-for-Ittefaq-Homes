@@ -98,30 +98,30 @@ export default function Hero() {
             <motion.div 
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -left-10 top-1/4 z-20 bg-white p-4 rounded-3xl shadow-2xl border border-gray-50 max-w-[170px]"
+              className="absolute -left-10 top-1/4 z-20 bg-white p-3 rounded-[1.5rem] shadow-2xl border border-gray-50 max-w-[150px]"
             >
               <div className="flex items-center space-x-2 mb-2">
-                 <div className="w-8 h-8 bg-success/10 text-success rounded-lg flex items-center justify-center font-bold text-sm">
+                 <div className="w-7 h-7 bg-success/10 text-success rounded-lg flex items-center justify-center font-bold text-xs">
                     15%
                  </div>
-                 <span className="text-[10px] font-black text-gray-400 uppercase tracking-widest">Avg. ROI</span>
+                 <span className="text-[9px] font-black text-gray-400 uppercase tracking-widest">Avg. ROI</span>
               </div>
-              <p className="text-xs font-bold text-primary">High-growth sectors identified daily.</p>
+              <p className="text-[10px] font-bold text-primary leading-tight">High-growth sectors identified daily.</p>
             </motion.div>
 
             {/* Floating Card 2 */}
             <motion.div 
               animate={{ y: [0, 10, 0] }}
               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-              className="absolute -right-6 bottom-1/4 z-20 bg-primary text-white p-4 rounded-3xl shadow-2xl max-w-[190px]"
+              className="absolute -right-6 bottom-1/4 z-20 bg-primary text-white p-3 rounded-[1.5rem] shadow-2xl max-w-[160px]"
             >
               <div className="flex items-center space-x-2 mb-2">
-                 <div className="w-7 h-7 bg-accent rounded-lg flex items-center justify-center">
-                    <CheckCircle size={14} />
+                 <div className="w-6 h-6 bg-accent rounded-lg flex items-center justify-center">
+                    <CheckCircle size={12} />
                  </div>
-                 <span className="text-[10px] font-bold uppercase tracking-widest opacity-60 font-sans">Verified</span>
+                 <span className="text-[9px] font-bold uppercase tracking-widest opacity-60 font-sans">Verified</span>
               </div>
-              <p className="text-sm font-display font-bold">500+ Luxury Homes Available.</p>
+              <p className="text-[11px] font-display font-bold leading-tight">500+ Luxury Homes Available.</p>
             </motion.div>
 
             {/* Pattern Overlay */}

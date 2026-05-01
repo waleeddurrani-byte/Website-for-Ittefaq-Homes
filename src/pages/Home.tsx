@@ -79,7 +79,68 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Services Section */}
+      <section className="py-24 px-4 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <span className="text-accent font-black uppercase tracking-[0.25em] text-xs mb-3 block">Expert Solutions</span>
+            <h2 className="text-3xl md:text-4xl font-display font-black text-primary">Everything You Need for Property</h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              { 
+                title: "Investment Consultancy", 
+                desc: "Data-backed advice on where to invest your capital for maximum returns over the next 3-5 years.",
+                img: "https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?auto=format&fit=crop&q=80&w=600"
+              },
+              { 
+                title: "Portfolio Management", 
+                desc: "We manage your property portfolio, handling rentals, resales, and upgrades while you earn passive income.",
+                img: "https://images.unsplash.com/photo-1454165833762-02651296ee8c?auto=format&fit=crop&q=80&w=600"
+              },
+              { 
+                title: "Documentation & Transfer", 
+                desc: "Skip the headache of paperwork. We handle title deeds, transfer letters, and legal verifications.",
+                img: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&q=80&w=600"
+              }
+            ].map((service) => (
+              <div key={service.title} className="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 group">
+                <div className="h-48 overflow-hidden">
+                  <img src={service.img} alt={service.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                </div>
+                <div className="p-8">
+                  <h3 className="text-xl font-display font-black mb-3">{service.title}</h3>
+                  <p className="text-gray-500 text-sm font-medium leading-relaxed mb-6">{service.desc}</p>
+                  <button onClick={() => openWhatsApp(`Details about ${service.title}`)} className="text-accent font-black text-xs uppercase tracking-widest flex items-center space-x-2">
+                    <span>Learn More</span>
+                    <ArrowRight size={14} />
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <LeadMagnet />
+
+      {/* Partners / Societies Section */}
+      <section className="py-16 px-4 bg-white border-y border-gray-100">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-10">
+            <span className="text-gray-400 font-black uppercase tracking-[0.25em] text-[10px] block">Authorized Dealers & Partners</span>
+          </div>
+          <div className="flex flex-wrap justify-center items-center gap-12 opacity-40 grayscale group">
+            {/* Real estate society names as conceptual logos */}
+            {['Bahria Town', 'DHA Islamabad', 'Capital Smart City', 'Gulberg Green', 'Eighteen'].map(name => (
+              <span key={name} className="text-xl md:text-2xl font-display font-black text-primary hover:grayscale-0 hover:opacity-100 transition-all cursor-default">
+                {name}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Why Us Section */}
       <section className="py-24 px-4 bg-primary text-white relative overflow-hidden">
